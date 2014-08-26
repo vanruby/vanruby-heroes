@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VanRubyHeroes</title>
+  <title>VanRuby Heroes</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 
-<h1>VanRuby Heroes</h1>
+<div class="container">
 
-<%= render 'flash' %>
+  <h1>VanRuby Heroes</h1>
 
-<%= yield %>
+  <%= render 'flash' %>
+
+  <%= yield %>
+
+</div>
 
 </body>
 </html>
