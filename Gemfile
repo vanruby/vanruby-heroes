@@ -15,7 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-html-sanitizer', '~> 1.0'
 
 gem 'haml'
-gem 'simple_form'
+gem 'simple_form', '3.1.0.rc2'
 
 group :development, :test do
   gem 'byebug'
