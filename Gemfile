@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
 
 gem 'rails', '4.2.0.beta1'
 gem 'pg'
@@ -13,6 +14,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-html-sanitizer', '~> 1.0'
 
+gem 'haml'
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug'

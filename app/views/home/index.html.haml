@@ -1,0 +1,7 @@
+%h2 Nominate
+
+= simple_form_for @vote do |f|
+  = f.input :nominee, label: "Nominee Github username"
+  = f.input :reason, label: "Reason"
+  = f.input :voter, label: "Your Github username"
+  = f.button :submit, "Nominate"
