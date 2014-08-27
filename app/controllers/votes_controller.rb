@@ -4,8 +4,7 @@ class VotesController < ApplicationController
     if @vote.save
       redirect_to :root, notice: "Thanks for voting!"
     else
-      flash.now[:error] = "There is something wrong with your nomination"
-      render :new
+      render "home/index"
     end
   end
 

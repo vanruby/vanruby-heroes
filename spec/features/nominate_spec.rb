@@ -33,6 +33,6 @@ describe "nominate a heroe", :vcr do
       click_button 'Nominate'
     }.to_not change { Vote.count }
 
-    expect(page.body).to include "There is something wrong with your nomination"
+    expect(page.body).to include "is invalid"
   end
 end
