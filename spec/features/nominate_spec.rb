@@ -22,11 +22,6 @@ describe "nominate a heroe", :vcr do
     expect(vote.voter_id).to eq 'pcreux'
     expect(vote.nominee_id).to eq 'chancancode'
     expect(vote.reason).to eq 'He makes rails so much lovable!'
-
-    # cache voter id
-    expect(find_field('vote_nominee_id').value).to be_blank
-    expect(find_field('vote_reason').value).to     be_blank
-    expect(find_field('vote_voter_id').value).to   eq 'pcreux'
   end
 
   it "does not allow invalid github users" do
