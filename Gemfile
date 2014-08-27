@@ -16,6 +16,7 @@ gem 'rails-html-sanitizer', '~> 1.0'
 
 gem 'haml'
 gem 'simple_form', '3.1.0.rc2'
+gem 'virtus'
 
 group :development, :test do
   gem 'byebug'
