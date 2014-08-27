@@ -1,0 +1,14 @@
+.row
+  .col-xs-12
+    %table.table.text-center
+      - Nominee.all.shuffle.in_groups_of(7).each do |group|
+        %tr
+          - group.each do |nominee|
+            - next if nominee.nil?
+
+            %td.nominee-thumb.nominee-name{ style: 'padding: 0 15px 5px' }
+              %img{width: '120', src: nominee.avatar_url}
+              %h4.text-center
+                = nominee.name
+                %br
+                = link_to "@#{nominee.login}", "https://github.com/#{nominee.login}", class: 'small', target: '_blank'

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+
+  get '/gems', to: 'home#gems'
+  get '/dash', to: 'home#dash'
 
   resources 'votes', only: :create
+
+  root to: 'home#index'
+
 end
