@@ -1,26 +1,3 @@
-%h2 Nominees
-
-- Nominee.all.shuffle.each do |nominee|
-  .row
-    .col-sm-1
-      %img{width: 60, height: 60, src: nominee.avatar_url}
-    .col-sm-3
-      %p.lead
-        = nominee.name
-        %span.small= "(#{nominee.login})"
-    .col-sm-8
-      %ul
-        - nominee.votes.sample(3).each do |vote|
-          %li
-            %p
-              = '"'
-              = vote.reason
-              = '"'
-
-              %br
-              = "--"
-              %img{width: 30, height: 30, src: vote.voter.avatar_url}
-              = vote.voter.name
-              %span.small= "(#{vote.voter.login})"
-
-= render template: 'votes/new'
+= render "intro"
+= render "nominees"
+= render "vote_button"

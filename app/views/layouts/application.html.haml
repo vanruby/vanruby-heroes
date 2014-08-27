@@ -10,20 +10,6 @@
 
   %body
     .container
-      %h1 VanRuby Heroes Award
-      %p.lead The VanRuby Heroes Award gives recognition to influential devs in the Vancouver Ruby community.
-      %p
-        Great work and commitment deserves recognition.
-        Vancouver is full of talented Ruby developers who contribute to open-source,
-        develop gems and share good vibes at VanRuby events.
-        The VanRuby Heroes Award gives those people recognition.
-        Please take the time to
-        %a{href: "#", onclick: "$('#vote-button').click()"}nominate your VanRuby Heroe
-        and to explain the reasons behind it.
-        The winners will be announced on Thursday, August 28, 2014 at the
-        %a{href: "http://www.meetup.com/vancouver-ruby/events/201652652/"} #VanRuby Summer BBQ.
-
-      = render 'flash'
       = yield
 
     = javascript_include_tag 'application'
