@@ -3,24 +3,25 @@
 <head>
   <title>VanRuby Heroes</title>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <%= javascript_include_tag 'modernizr.custom' %>
 </head>
 <body>
+  <div class="container">
 
-<div class="container">
 
-  <h1>VanRuby Heroes</h1>
+    <h1>VanRuby Heroes</h1>
 
-  <%= render 'flash' %>
+    <%= render 'flash' %>
 
-  <%= yield %>
+    <%= yield %>
 
-</div>
+  </div>
 
+  <%= javascript_include_tag 'application' %>
 </body>
 </html>

@@ -1,17 +1,24 @@
-.button-wrapper.text-center{ style: 'background: #405; bottom: 0; height: 60px; left: 0; padding-top: 15px; position: fixed; width: 100%' }
-  %button.vote-form-toggler.button.success
-    Vote / Nominate
+.button-wrapper.text-center{ style: 'background: #fff; bottom: 0; height: 60px; left: 0; position: fixed; width: 100%' }
+  .mockup-content
+    .morph-button.morph-button-modal.morph-button-modal-2.morph-button-fixed
+      %button{ type: "button" }
+        Vote or Nominate
+      .morph-content
+        %div
+          .content-style-form.content-style-form-1
+            %span.icon.icon-close
+              Close the dialog
 
-.vote-nominee-wrapper
-  %h2 Vote / Nominate
+            %h2 Vote / Nominate
 
-  %p
-    Nominate any Ruby developer based in Vancouver for the
-    %strong #VanRuby
-    Hero award.
+            = simple_form_for @vote do |f|
+              %p
+                Nominate any Ruby developer based in Vancouver for the
+                %strong #VanRuby
+                Hero award.
 
-  = simple_form_for @vote do |f|
-    = f.input :nominee, label: "Nominee Github"
-    = f.input :reason, label: "Reason"
-    = f.input :voter, label: "Your Github"
-    = f.button :submit, "Nominate"
+              = f.input :nominee, label: "Nominee Github"
+              = f.input :reason, label: "Reason"
+              = f.input :voter, label: "Your Github"
+              = f.button :submit, "Nominate"
+
