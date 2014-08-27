@@ -13,5 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
-//= require turbolinks
 //= require_tree .
+
+$( document ).ready(function() {
+
+  $('.vote-form-toggler').on('click', function(){
+    $('.vote-nominee-wrapper').toggleClass('animate');
+  });
+
+});

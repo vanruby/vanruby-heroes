@@ -1,10 +1,17 @@
-%h2 Nominate
+.button-wrapper.text-center{ style: 'background: #405; bottom: 0; height: 60px; left: 0; padding-top: 15px; position: fixed; width: 100%' }
+  %button.vote-form-toggler.button.success
+    Vote / Nominate
 
-%p
-  Nominate any Ruby developer based in Vancouver for the VanRuby Heroe award.
+.vote-nominee-wrapper
+  %h2 Vote / Nominate
 
-= simple_form_for @vote do |f|
-  = f.input :nominee, label: "Nominee Github"
-  = f.input :reason, label: "Reason"
-  = f.input :voter, label: "Your Github"
-  = f.button :submit, "Nominate"
+  %p
+    Nominate any Ruby developer based in Vancouver for the
+    %strong #VanRuby
+    Hero award.
+
+  = simple_form_for @vote do |f|
+    = f.input :nominee, label: "Nominee Github"
+    = f.input :reason, label: "Reason"
+    = f.input :voter, label: "Your Github"
+    = f.button :submit, "Nominate"
