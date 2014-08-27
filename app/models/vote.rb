@@ -1,6 +1,6 @@
 class Vote < ActiveRecord::Base
   validates_presence_of :voter_id, :nominee_id, :reason
-  validates_uniqueness_of :nominee_id, scope: :voter_id
+  validates_uniqueness_of :voter_id, message: "you've nominated someone already"
 
   scope :for_nominee, ->(nominee_id) { where(nominee_id: nominee_id) }
 
