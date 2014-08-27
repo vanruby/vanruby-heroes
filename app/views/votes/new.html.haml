@@ -6,16 +6,20 @@
       .morph-content
         %div
           .content-style-form.content-style-form-1
-            %span.icon.icon-close
-              Close the dialog
+            %span.close-x
+              &#10006;
 
             %h2 Vote / Nominate
 
             = simple_form_for @vote do |f|
               %p
-                Nominate any Ruby developer based in Vancouver for the
+                Nominate or vote for any Ruby developer based in Vancouver for the
                 %strong #VanRuby
                 Hero award.
+              %p
+                Make it count, as
+                %strong you can only vote once
+                !
 
               = f.input :nominee_id, label: "Nominee Github"
               = f.input :reason, label: "Reason"
