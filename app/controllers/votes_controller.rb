@@ -1,6 +1,7 @@
 class VotesController < ApplicationController
   def create
     @vote = Vote.new(vote_params)
+    @vote.ip_address = request.remote_ip
     if @vote.save
       redirect_to :root, notice: "Thanks for voting!"
     else
