@@ -1,8 +1,9 @@
-.flash
-  - if flash[:notice].present?
-    .alert.alert-success{role: "alert"}
-      = flash[:notice]
+.row.text-center
+  .flash.col-xs-12.col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2
+    - if flash[:notice].present?
+      .alert.alert-success{role: "alert"}
+        = flash[:notice]
 
-  - if flash[:error].present?
-    .alert.alert-warning{role: "alert"}
-      = flash[:error]
+    - if flash[:error].present?
+      .alert.alert-warning{role: "alert"}
+        = flash[:error]

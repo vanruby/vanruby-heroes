@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather+Sans:800);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather+Sans:800);
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
@@ -17,7 +17,6 @@ body {
   line-height: 1.25;
   font-weight: 300;
   text-rendering: optimizeLegibility;
-  // font-family: 'Lato', Arial, sans-serif;
 }
 
 a, button {
@@ -37,6 +36,8 @@ h1.title {
   background: #fff;
   border-bottom: 1px solid #dadada;
   color: #444;
+  font-weight: 300;
+  font-family: 'Lato', Arial, sans-serif;
   font-size: 24px;
   height: 60px;
   left: 0;
@@ -53,7 +54,7 @@ div.nominations {
   background-color: #fff;
   border-radius: 4px 4px 0 0;
   margin-top: 40px;
-  padding: 15px 8px 15px;
+  padding: 8px;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
@@ -66,6 +67,7 @@ div.nominations {
   max-width: 10%;
 }
 .table > tbody > tr > .nominee-name {
+  font-family: 'Lato', Arial, sans-serif;
   width: 22%;
 }
 .table > tbody > tr > .nominee-reason p {
@@ -79,6 +81,7 @@ div.nominations {
   margin-bottom: 4px;
 }
 .table > tbody > tr > .nominee-reason .voter-name {
+  font-family: 'Lato', Arial, sans-serif;
   font-weight: bold;
   margin: 8px;
 }
@@ -857,4 +860,13 @@ div.nominations {
 .has-error .form-control,
 .has-error .form-control:focus {
   border-color: #fff;
+}
+
+.alert {
+  background: #fff;
+  font-size: 18px;
+}
+.alert.alert-success {
+  border: 2px dotted #5ED15E;
+  color: #3EC83E;
 }
