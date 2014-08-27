@@ -19,7 +19,7 @@ body {
 }
 
 a, button {
-  color: #553445;
+  color: #DA0606;
   text-decoration: none;
   outline: none;
 }
@@ -44,29 +44,56 @@ h1.title {
 
 div.nominations {
   background-color: #fff;
-  border-color: #ddd;
-  border-width: 1px;
   border-radius: 4px 4px 0 0;
-  box-shadow: 0 0 4px rgba(0,0,0,0.08);
   margin-top: 40px;
-  padding: 15px 15px 15px;
-  border-color: #e5e5e5 #eee #eee;
-  border-style: solid;
+  padding: 15px 8px 15px;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: #f7f7f7;
+}
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
   background-color: #fcfcfc;
 }
-// .table > tbody > tr > .nominee-thumb {
-//   width: 10%;
-// }
-// .table > tbody > tr > .nominee-name {
-//   width: 30%;
-// }
+.table > tbody > tr > .nominee-thumb {
+  max-width: 10%;
+}
+.table > tbody > tr > .nominee-name {
+  width: 22%;
+}
+.table > tbody > tr > .nominee-reason p {
+  font-size: 17px;
+  margin-bottom: 14px;
+  line-height: 24px;
+}
+.table > tbody > tr > .nominee-reason blockquote {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.table > tbody > tr > .nominee-reason .voter-name {
+  font-weight: bold;
+  margin: 8px;
+}
+.table > tbody > tr > .nominee-reason img {
+  margin-right: 10px;
+}
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+  border-top: 0;
+  padding: 18px 8px;
+}
 
 @media screen and (max-width: 767px) {
   .table-responsive {
     border: 0;
+  }
+  .table > tbody > tr > .nominee-thumb {
+    max-width: 10%;
+    width: 10%;
   }
 }
 

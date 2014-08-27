@@ -1,25 +1,35 @@
-%h2 Nominees
+.row
+  .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+    .nominations
+      %table.table.table-striped.table-hover.table-responsive
+        / %thead
+        /   %tr
+        /     %th.text-center{ colspan: 2 }
+        /       Nominee:
+        /     %th.text-center.hidden-xs
+        /       Nominated By:
+        %tbody
+          - Nominee.all.shuffle.each do |nominee|
+            %tr
+              %td.nominee-thumb.visible-xs
+                %img{width: '100%', src: nominee.avatar_url}
+              %td.nominee-name.visible-xs
+                %h4.text-center
+                  = nominee.name
+                  %br
+                  = link_to nominee.login, "https://github.com/#{nominee.login}", class: 'small', target: '_blank'
+              %td.nominee-thumb.nominee-name.hidden-xs
+                %img{width: '100%', src: nominee.avatar_url}
+                %h4.text-center
+                  = nominee.name
+                  %br
+                  = link_to nominee.login, "https://github.com/#{nominee.login}", class: 'small', target: '_blank'
 
-- Nominee.all.shuffle.each do |nominee|
-  .row
-    .col-sm-1
-      %img{width: 60, height: 60, src: nominee.avatar_url}
-    .col-sm-3
-      %p.lead
-        = nominee.name
-        %span.small= "(#{nominee.login})"
-    .col-sm-8
-      %ul
-        - nominee.votes.sample(3).each do |vote|
-          %li
-            %p
-              = '"'
-              = vote.reason
-              = '"'
+              %td.nominee-reason.hidden-xs
+                - nominee.votes.last.tap do |vote|
+                  .clearfix
+                    %blockquote= vote.reason
 
-              %br
-              = "--"
-              %img{width: 30, height: 30, src: vote.voter.avatar_url}
-              = vote.voter.name
-              %span.small= "(#{vote.voter.login})"
-
+                    = link_to "https://github.com/#{vote.voter.login}", target: '_blank' do
+                      %img.pull-right.img-circle{width: 40, height: 40, src: vote.voter.avatar_url}
+                    = link_to vote.voter.name, "https://github.com/#{vote.voter.login}", class: 'pull-right voter-name', target: '_blank'
