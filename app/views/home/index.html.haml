@@ -19,8 +19,8 @@
 
               %br
               = "--"
-              %img{width: 30, height: 30, src: vote.voter_user.avatar_url}
-              = vote.voter_user.name
-              %span.small= "(#{vote.voter_user.login})"
+              %img{width: 30, height: 30, src: vote.voter.avatar_url}
+              = vote.voter.name
+              %span.small= "(#{vote.voter.login})"
 
 = render template: 'votes/new'

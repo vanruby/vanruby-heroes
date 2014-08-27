@@ -7,9 +7,9 @@ describe "nominate a heroe", :vcr do
 
   it "persists the nomination" do
     visit '/'
-    fill_in 'vote_nominee', with: 'chancancode'
+    fill_in 'vote_nominee_id', with: 'chancancode'
     fill_in 'vote_reason', with: "He makes rails so much lovable!"
-    fill_in 'vote_voter', with: 'pcreux'
+    fill_in 'vote_voter_id', with: 'pcreux'
     expect {
       click_button 'Nominate'
     }.to change { Vote.count }.by 1
@@ -19,16 +19,16 @@ describe "nominate a heroe", :vcr do
 
     vote = Vote.last
 
-    expect(vote.voter).to eq 'pcreux'
-    expect(vote.nominee).to eq 'chancancode'
+    expect(vote.voter_id).to eq 'pcreux'
+    expect(vote.nominee_id).to eq 'chancancode'
     expect(vote.reason).to eq 'He makes rails so much lovable!'
   end
 
   it "does not allow invalid github users" do
     visit '/'
-    fill_in 'vote_nominee', with: 'chancancode'
+    fill_in 'vote_nominee_id', with: 'chancancode'
     fill_in 'vote_reason', with: "He makes rails so much lovable!"
-    fill_in 'vote_voter', with: 'INVALID_GITHUB_USER_1234'
+    fill_in 'vote_voter_id', with: 'INVALID_GITHUB_USER_1234'
     expect {
       click_button 'Nominate'
     }.to_not change { Vote.count }

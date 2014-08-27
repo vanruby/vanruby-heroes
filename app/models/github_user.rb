@@ -2,6 +2,8 @@ require 'open-uri'
 
 class GithubUser
   def self.find(nickname)
+    raise ArgumentError, "nickname can't be nil" if nickname.blank?
+
     Rails.cache.fetch "github-#{nickname}" do
       response = open("https://api.github.com/users/#{nickname}").read
       new(JSON.parse(response))

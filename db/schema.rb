@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140826221830) do
+ActiveRecord::Schema.define(version: 20140827170453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "votes", force: true do |t|
-    t.string   "voter",      null: false
-    t.string   "nominee",    null: false
+    t.string   "voter_id",   null: false
+    t.string   "nominee_id", null: false
     t.text     "reason",     null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
