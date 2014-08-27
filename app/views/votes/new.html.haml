@@ -1,0 +1,10 @@
+%h2 Nominate
+
+%p
+  Nominate any Ruby developer based in Vancouver for the VanRuby Heroe award.
+
+= simple_form_for @vote do |f|
+  = f.input :nominee, label: "Nominee Github"
+  = f.input :reason, label: "Reason"
+  = f.input :voter, label: "Your Github"
+  = f.button :submit, "Nominate"

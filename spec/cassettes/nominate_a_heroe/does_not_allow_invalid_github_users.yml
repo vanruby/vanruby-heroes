@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/users/pcreux
+    uri: https://api.github.com/users/INVALID_GITHUB_USER_1234
     body:
       encoding: US-ASCII
       string: ''
@@ -15,34 +15,25 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Server:
       - GitHub.com
       Date:
-      - Wed, 27 Aug 2014 01:07:54 GMT
+      - Wed, 27 Aug 2014 01:07:56 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
       - chunked
       Status:
-      - 200 OK
+      - 404 Not Found
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '33'
+      - '31'
       X-Ratelimit-Reset:
       - '1409101905'
-      Cache-Control:
-      - public, max-age=60, s-maxage=60
-      Last-Modified:
-      - Wed, 27 Aug 2014 00:49:30 GMT
-      Etag:
-      - '"bfcf731704f2f7315d7531b2a116e19f"'
-      Vary:
-      - Accept
-      - Accept-Encoding
       X-Github-Media-Type:
       - github.v3
       X-Xss-Protection:
@@ -59,20 +50,16 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 18540219:0874:25F9173A:53FD2F6A
+      - 18540219:1F01:1C5E4A:53FD2F6C
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains
       X-Content-Type-Options:
       - nosniff
-      X-Served-By:
-      - 03d91026ad8428f4d9966d7434f9d82e
     body:
       encoding: UTF-8
-      string: '{"login":"pcreux","id":45299,"avatar_url":"https://avatars.githubusercontent.com/u/45299?v=2","gravatar_id":"25a07538df2545604409a6216b4a3bc8","url":"https://api.github.com/users/pcreux","html_url":"https://github.com/pcreux","followers_url":"https://api.github.com/users/pcreux/followers","following_url":"https://api.github.com/users/pcreux/following{/other_user}","gists_url":"https://api.github.com/users/pcreux/gists{/gist_id}","starred_url":"https://api.github.com/users/pcreux/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/pcreux/subscriptions","organizations_url":"https://api.github.com/users/pcreux/orgs","repos_url":"https://api.github.com/users/pcreux/repos","events_url":"https://api.github.com/users/pcreux/events{/privacy}","received_events_url":"https://api.github.com/users/pcreux/received_events","type":"User","site_admin":false,"name":"Philippe
-        Creux","company":"Brewhouse","blog":"http://pcreux.com","location":"Vancouver,
-        BC","email":"pcreux@gmail.com","hireable":false,"bio":null,"public_repos":60,"public_gists":63,"followers":87,"following":25,"created_at":"2009-01-09T09:40:37Z","updated_at":"2014-08-27T00:49:30Z"}'
+      string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3"}'
     http_version: 
-  recorded_at: Wed, 27 Aug 2014 01:07:55 GMT
+  recorded_at: Wed, 27 Aug 2014 01:07:56 GMT
 - request:
     method: get
     uri: https://api.github.com/users/chancancode
@@ -94,7 +81,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 27 Aug 2014 01:07:55 GMT
+      - Wed, 27 Aug 2014 01:07:56 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -104,7 +91,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '32'
+      - '30'
       X-Ratelimit-Reset:
       - '1409101905'
       Cache-Control:
@@ -132,17 +119,17 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 18540219:1F01:1C5DB1:53FD2F6B
+      - 18540219:1F02:2258A9:53FD2F6C
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains
       X-Content-Type-Options:
       - nosniff
       X-Served-By:
-      - c436b2b44345c72ff906059f604991e7
+      - c046d59f93ede9ab52d5ac29f1ed70f7
     body:
       encoding: UTF-8
       string: '{"login":"chancancode","id":55829,"avatar_url":"https://avatars.githubusercontent.com/u/55829?v=2","gravatar_id":"22bb3e56828870ee9a0dd93aeadbe04a","url":"https://api.github.com/users/chancancode","html_url":"https://github.com/chancancode","followers_url":"https://api.github.com/users/chancancode/followers","following_url":"https://api.github.com/users/chancancode/following{/other_user}","gists_url":"https://api.github.com/users/chancancode/gists{/gist_id}","starred_url":"https://api.github.com/users/chancancode/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/chancancode/subscriptions","organizations_url":"https://api.github.com/users/chancancode/orgs","repos_url":"https://api.github.com/users/chancancode/repos","events_url":"https://api.github.com/users/chancancode/events{/privacy}","received_events_url":"https://api.github.com/users/chancancode/received_events","type":"User","site_admin":false,"name":"Godfrey
         Chan","company":null,"blog":"http://about.me/godfreychan","location":null,"email":"","hireable":false,"bio":null,"public_repos":62,"public_gists":27,"followers":70,"following":4,"created_at":"2009-02-19T09:01:38Z","updated_at":"2014-08-26T18:17:41Z"}'
     http_version: 
-  recorded_at: Wed, 27 Aug 2014 01:07:56 GMT
+  recorded_at: Wed, 27 Aug 2014 01:07:57 GMT
 recorded_with: VCR 2.9.0

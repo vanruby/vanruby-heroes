@@ -6,6 +6,13 @@ class GithubUser
       response = open("https://api.github.com/users/#{nickname}").read
       new(JSON.parse(response))
     end
+
+  rescue OpenURI::HTTPError => e
+    if e.to_s == '404 Not Found'
+      nil
+    else
+      raise e
+    end
   end
 
   include Virtus.model
