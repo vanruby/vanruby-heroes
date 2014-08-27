@@ -1,10 +1,25 @@
-%h2 Nominations
+%h2 Nominees
 
-%ul
-- Nominee.all.each do |nominee|
-  %li
-    = nominee.github
-    = t('votes', count: nominee.votes_count)
+- Nominee.all.each_with_index do |nominee, index|
+  .row
+    .col-sm-1
+      %img{width: 60, height: 60, src: nominee.avatar_url}
+    .col-sm-3
+      %p.lead
+        = nominee.name
+        %span.small= "(#{nominee.login})"
+      %p
+        = t('votes', count: nominee.votes_count)
+    .col-sm-5
+      %ul
+        - nominee.votes.each do |vote|
+          %li
+            = '"'
+            = vote.reason
+            = '"'
+
+            = "--"
+            = vote.voter
 
 %h2 Nominate
 

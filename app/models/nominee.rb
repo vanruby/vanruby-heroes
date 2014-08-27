@@ -10,4 +10,14 @@ class Nominee
   attribute :github, String
   attribute :votes_count, Integer
 
+  delegate :name, :login, :avatar_url, to: :github_user
+
+  def github_user
+    @github_user ||= GithubUser.find(github)
+  end
+
+  def votes
+    Vote.for_nominee(login)
+  end
+
 end
