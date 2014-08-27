@@ -9,16 +9,13 @@
 .clearfix:after { clear: both; }
 
 body {
+  background: #FCF7F2;
   position: relative;
   color: #333;
   font-size: 100%;
   line-height: 1.25;
   font-weight: 300;
   font-family: 'Lato', Arial, sans-serif;
-}
-
-.container {
-  background: #F1F0E8;
 }
 
 a, button {
