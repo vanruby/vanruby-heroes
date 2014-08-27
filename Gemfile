@@ -18,6 +18,7 @@ gem 'simple_form', '3.1.0.rc2'
 gem 'virtus'
 
 gem 'newrelic_rpm'
+gem 'exception_notification'
 
 group :development, :test do
   gem 'byebug'

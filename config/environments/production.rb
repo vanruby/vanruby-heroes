@@ -100,4 +100,11 @@ Rails.application.configure do
     :password       => ENV['MANDRILL_APIKEY'],
     :domain         => 'heroku.com',
   }
+
+  config.middleware.use ExceptionNotification::Rack,
+    :email => {
+      :email_prefix => "[VanRubyHeroes] ",
+      :sender_address => %{"Exception Notification" <oopsy@vanruby.org>},
+      :exception_recipients => (ENV['EXCEPTION_RECIPIENTS'] || "").split(' ')
+    }
 end
