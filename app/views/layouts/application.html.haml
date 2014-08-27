@@ -1,14 +1,16 @@
 !!!
 %html
   %head
-    %title VanRuby Heroes Award
-    %meta{name: 'description', content: 'The VanRuby Heroes Award gives recognition to influential devs in the Vancouver Ruby community.'}
+    %title VanRuby Hero Awards
+    %meta{name: 'description', content: 'The VanRuby Hero Awards gives recognition to influential devs in the Vancouver Ruby community.'}
     = stylesheet_link_tag    'application', media: 'all'
     = csrf_meta_tags
     %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
     = javascript_include_tag 'modernizr.custom'
 
   %body
+    %h1.title VanRuby Hero Awards
+
     .container
       = yield
 
