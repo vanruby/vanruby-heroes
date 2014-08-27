@@ -9,17 +9,17 @@
 .clearfix:after { clear: both; }
 
 body {
-  background: #FCF7F2;
+  background: #FFFDFA;
+  padding-bottom: 120px;
   position: relative;
   color: #333;
-  font-size: 100%;
   line-height: 1.25;
   font-weight: 300;
   font-family: 'Lato', Arial, sans-serif;
 }
 
 a, button {
-  color: #553445;
+  color: #DA0606;
   text-decoration: none;
   outline: none;
 }
@@ -31,8 +31,89 @@ a:hover, a:focus {
 
 
 
+h1.title {
+  background: #fff;
+  border-bottom: 1px solid #dadada;
+  color: #444;
+  font-size: 24px;
+  margin-top: 0;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
 
+div.nominations {
+  background-color: #fff;
+  // border-color: #ddd;
+  // border-width: 1px;
+  border-radius: 4px 4px 0 0;
+  // box-shadow: 0 0 4px rgba(0,0,0,0.08);
+  margin-top: 40px;
+  padding: 15px 8px 15px;
+  // border-color: #e5e5e5 #eee #eee;
+  // border-style: solid;
+}
 
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: #f7f7f7;
+}
+.table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
+  background-color: #fcfcfc;
+}
+.table > tbody > tr > .nominee-thumb {
+  max-width: 10%;
+}
+.table > tbody > tr > .nominee-name {
+  width: 22%;
+}
+.table > tbody > tr > .nominee-reason p {
+  font-size: 17px;
+  margin-bottom: 14px;
+  line-height: 24px;
+}
+.table > tbody > tr > .nominee-reason blockquote {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.table > tbody > tr > .nominee-reason .voter-name {
+  font-weight: bold;
+  margin: 8px;
+}
+.table > tbody > tr > .nominee-reason img {
+  margin-right: 10px;
+}
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+  border-top: 0;
+  padding: 18px 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .table-responsive {
+    border: 0;
+  }
+  .table > tbody > tr > .nominee-thumb {
+    max-width: 10%;
+    width: 10%;
+  }
+
+}
+
+.info {
+  margin-top: 20px;
+}
+.info p {
+  font-size: 15px;
+  line-height: 24px;
+}
+.info p.lead {
+  font-size: 19px;
+  line-height: 30px;
+}
 
 .no-js .joiner {
   display: block;
@@ -175,9 +256,9 @@ a:hover, a:focus {
 }
 
 .content-style-text label {
-    padding: 10px;
-    color: #f9e1c9;
-    font-weight: bold;
+  padding: 10px;
+  color: #f9e1c9;
+  font-weight: bold;
 }
 
 .content-style-text .close-x {
@@ -198,7 +279,7 @@ a:hover, a:focus {
 
 .content-style-form h2 {
   margin: 0;
-  padding: 1em 0 0.7em;
+  padding: 0.75em 0 0.4em;
   text-align: center;
   font-weight: 300;
   font-size: 3.5em;
@@ -209,43 +290,66 @@ a:hover, a:focus {
 }
 
 .content-style-form form p {
+  color: #E2C9A3;
   margin: 0 0 15px 0;
   font-size: 14px;
+  font-weight: bold;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.content-style-form form p strong {
+  color: #fff;
 }
 
 .content-style-form label {
   display: block;
   padding: 16px 0 0;
-  color: #d5bba4;
+  color: #E2C9A3;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
 }
 
+.content-style-form textarea {
+  height: 60px;
+}
+
 .content-style-form input[type="text"],
-.content-style-form input[type="textarea"] {
-  padding: 10px;
+.content-style-form textarea,
+.content-style-form input.btn {
+  padding: 0px 10px;
   width: 100%;
   border: 2px solid #FCF7F2;
-  background: transparent;
-  color: #fff;
+  border-radius: 2px;
+  background: #fff;
+  color: #CC2424;
   font-weight: 300;
-  font-size: 2.2em;
+  font-size: 19px;
 }
 
 .content-style-form input[type="text"]:focus,
-.content-style-form input[type="textarea"]:focus {
-  border-color: #FCF7F2;
-  color: #fff;
+.content-style-form textarea:focus,
+.content-style-form input.btn:focus {
+  border-color: #fff;
+  color: #CC2424;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.8);
+  outline: 0;
 }
 
-.content-style-form input:focus {
-  outline: 0;
+.content-style-form input.btn {
+  margin-top: 20px;
+  padding: 5px;
+}
+.content-style-form input.btn:hover {
+  background: #F05858;
+  color: #fff;
 }
 
 .content-style-form button {
   display: block;
-  margin-top: 2.5em;
+  margin-top: 50px;
   padding: 1.5em;
   width: 100%;
   border: none;
@@ -462,14 +566,12 @@ a:hover, a:focus {
 }
 
 /* Transitions for overlay button and sidebar button */
-.morph-button-overlay .morph-content,
-.morph-button-sidebar .morph-content {
+.morph-button-overlay .morph-content {
   -webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
   transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
 }
 
-.morph-button-overlay.open .morph-content,
-.morph-button-sidebar.open .morph-content {
+.morph-button-overlay.open .morph-content {
   -webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
   transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
 }
@@ -641,37 +743,6 @@ a:hover, a:focus {
   width: 260px;
 }
 
-/* Morph Button Style: Sidebar */
-.morph-button-sidebar,
-.morph-button-sidebar .morph-content {
-  width: 60px;
-  height: 60px;
-}
-
-.morph-button-sidebar {
-  position: fixed;
-  bottom: 50px;
-  left: 50px;
-}
-
-.morph-button-sidebar > button {
-  line-height: 60px;
-  font-size: 1.6em;
-  padding: 0;
-}
-
-.morph-button-sidebar .morph-content {
-  background: #e85657;
-}
-
-.morph-button-sidebar.open .morph-content {
-  top: 0 !important;
-  left: 0 !important;
-  width: 100px;
-  height: 100%;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-}
 
 /* Let's add some nice easing for all cases */
 .morph-button .morph-content,
@@ -687,10 +758,6 @@ a:hover, a:focus {
 
 .morph-button-overlay.scroll .morph-content {
   overflow-y: scroll;
-}
-
-.morph-button-sidebar.scroll .morph-content {
-  overflow: auto;
 }
 
 /* No JS fallback: let's hide the button and show the content */
@@ -722,16 +789,6 @@ a:hover, a:focus {
   display: none;
 }
 
-.no-js .morph-button-sidebar {
-  width: 300px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-  height: 100%;
-  background: #e85657;
-  overflow: auto;
-}
 
 .no-transition {
   -webkit-transition: none !important;
@@ -756,34 +813,24 @@ a:hover, a:focus {
 @media screen and (max-width: 400px) {
   .morph-button-fixed,
   .morph-button-fixed .morph-content {
-    width: 200px;
+    width: 300px;
     height: 40px;
-  }
-
-  .morph-button-fixed > button {
-    font-size: 75%;
-  }
-
-  .morph-button-sidebar > button {
-    font-size: 1.6em;
   }
 
   .morph-button-inflow .morph-content .morph-clone {
     font-size: 0.9em;
   }
 
-  .morph-button-sidebar,
-  .morph-button-sidebar .morph-content {
-    width: 100% !important;
-    height: 60px !important;
-  }
+}
 
-  .morph-button-sidebar {
-    bottom: 0px;
-    left: 0px;
-  }
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline {
+  color: #fff;
+}
+.help-block {
+  font-size: 12px;
+}
 
-  .morph-button-sidebar.open .morph-content {
-    height: 100% !important;
-  }
+.has-error .form-control,
+.has-error .form-control:focus {
+  border-color: #fff;
 }

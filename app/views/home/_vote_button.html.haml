@@ -1,8 +1,8 @@
-.button-wrapper.text-center{ style: 'background: #fff; bottom: 0; height: 60px; left: 0; position: fixed; width: 100%' }
+.button-wrapper.text-center{ style: 'border-top: 1px solid #dadada; box-shadow: 0 -1px 2px rgba(0,0,0,0.08); background: #fff; bottom: 0; height: 60px; left: 0; position: fixed; width: 100%' }
   .mockup-content
     .morph-button.morph-button-modal.morph-button-modal-2.morph-button-fixed
       %button#vote-button{ type: "button" }
-        Vote or Nominate
+        Vote / Nominate
       .morph-content
         %div
           .content-style-form.content-style-form-1
@@ -13,16 +13,15 @@
 
             = simple_form_for @vote do |f|
               %p
-                Nominate or vote for any Ruby developer based in Vancouver for the
-                %strong #VanRuby
-                Hero award.
+                You can pick any Rubyist in Vancouver for the
+                %strong #VanRuby Hero Awards!
+
               %p
                 Make it count, as
-                %strong you can only vote once
-                !
+                %strong you can only vote once.
 
               = f.input :nominee_id, label: "Nominee Github"
-              = f.input :reason, label: "Reason"
+              = f.input :reason, label: "Reason", input_html: { maxlength: 160 }
               = f.input :voter_id, label: "Your Github"
-              = f.button :submit, "Nominate"
+              = f.button :submit, "Submit"
 
