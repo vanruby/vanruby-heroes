@@ -1,6 +1,6 @@
 %h2 Nominees
 
-- Nominee.all.each_with_index do |nominee, index|
+- Nominee.all.shuffle.each do |nominee|
   .row
     .col-sm-1
       %img{width: 60, height: 60, src: nominee.avatar_url}
@@ -8,11 +8,9 @@
       %p.lead
         = nominee.name
         %span.small= "(#{nominee.login})"
-      %p
-        = t('votes', count: nominee.votes_count)
     .col-sm-8
       %ul
-        - nominee.votes.each do |vote|
+        - nominee.votes.sample(3).each do |vote|
           %li
             %p
               = '"'
