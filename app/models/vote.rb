@@ -5,6 +5,10 @@ class Vote < ActiveRecord::Base
 
   validate :validate_githubs
 
+  def voter_name
+    GithubUser.find(voter).name
+  end
+
   private
 
   def validate_githubs

@@ -14,11 +14,14 @@
       %ul
         - nominee.votes.each do |vote|
           %li
-            = '"'
-            = vote.reason
-            = '"'
+            %p
+              = '"'
+              = vote.reason
+              = '"'
 
-            = "--"
-            = vote.voter
+              %br
+              = "--"
+              = vote.voter_name
+              %span.small= "(#{vote.voter})"
 
 = render template: 'votes/new'
