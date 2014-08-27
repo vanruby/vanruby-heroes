@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/chancancode
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 27 Aug 2014 00:48:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '51'
+      X-Ratelimit-Reset:
+      - '1409101905'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Last-Modified:
+      - Tue, 26 Aug 2014 18:17:41 GMT
+      Etag:
+      - '"40629039e98978bffb21c4090610af3b"'
+      Vary:
+      - Accept
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 18540219:6A40:13D1C4B5:53FD2AC9
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - 03d91026ad8428f4d9966d7434f9d82e
+    body:
+      encoding: UTF-8
+      string: '{"login":"chancancode","id":55829,"avatar_url":"https://avatars.githubusercontent.com/u/55829?v=2","gravatar_id":"22bb3e56828870ee9a0dd93aeadbe04a","url":"https://api.github.com/users/chancancode","html_url":"https://github.com/chancancode","followers_url":"https://api.github.com/users/chancancode/followers","following_url":"https://api.github.com/users/chancancode/following{/other_user}","gists_url":"https://api.github.com/users/chancancode/gists{/gist_id}","starred_url":"https://api.github.com/users/chancancode/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/chancancode/subscriptions","organizations_url":"https://api.github.com/users/chancancode/orgs","repos_url":"https://api.github.com/users/chancancode/repos","events_url":"https://api.github.com/users/chancancode/events{/privacy}","received_events_url":"https://api.github.com/users/chancancode/received_events","type":"User","site_admin":false,"name":"Godfrey
+        Chan","company":null,"blog":"http://about.me/godfreychan","location":null,"email":"","hireable":false,"bio":null,"public_repos":62,"public_gists":27,"followers":70,"following":4,"created_at":"2009-02-19T09:01:38Z","updated_at":"2014-08-26T18:17:41Z"}'
+    http_version: 
+  recorded_at: Wed, 27 Aug 2014 00:48:09 GMT
+recorded_with: VCR 2.9.0

@@ -1,6 +1,10 @@
 require 'rails_helper'
 
-describe "nominate a heroe" do
+describe "nominate a heroe", :vcr do
+  before do
+    Rails.cache.clear
+  end
+
   it "persists the nomination" do
     visit '/'
     fill_in 'vote_nominee', with: 'chancancode'
