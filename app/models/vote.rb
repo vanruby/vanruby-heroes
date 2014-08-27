@@ -19,6 +19,9 @@ class Vote < ActiveRecord::Base
 
   def validate_githubs
     %w(voter_id nominee_id).each do |attribute|
+      github_id = self[attribute]
+      next if github_id.blank?
+
       if GithubUser.find(self[attribute]).blank?
         errors.add(attribute, :invalid)
       end
