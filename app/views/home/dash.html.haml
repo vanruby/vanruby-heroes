@@ -18,6 +18,13 @@
 
                 - nominee.votes.last.tap do |vote|
                   .reason.hidden
-                    = vote.reason
+                    = vote.voter.name
+                    voted for
+                    = "#{nominee.name}:"
+                    %br
+
+                    %em
+                      = %{"#{vote.reason}"}
+
 
 .overlay.animate

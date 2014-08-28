@@ -906,7 +906,7 @@ div.nominations {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.80);
   content: '';
   opacity: 0;
   -webkit-transition: opacity 0.5s;
@@ -923,9 +923,9 @@ div.nominations {
   transition: all 1s;
 }
 .reason-bridge {
-  color: #fff;
+  color: #ccc;
   font-family: 'Lato', Arial, sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   height: 1px;
   left: 160px;
   margin: 0 auto;
@@ -934,6 +934,11 @@ div.nominations {
   top: -10px;
   width: 100%;
   z-index: 5000;
+}
+.dash .reason-bridge em {
+  color: #fff;
+  font-family: Serif;
+  font-size: 30px;
 }
 .reason-bridge.visible {
   opacity: 1;
