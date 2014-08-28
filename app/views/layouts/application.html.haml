@@ -9,9 +9,11 @@
     = javascript_include_tag 'modernizr.custom'
 
   %body{ id: "#{controller_name}-#{action_name}" }
+
     %h1.title
       = image_tag('vanruby-logo.png', width: 32, style: 'margin-right: 6px;vertical-align: -9px;')
       = "VanRuby Hero Awards"
+      = "... vote now at <strong>heroes.vanruby.org</strong> !".html_safe if action_name == 'dash'
 
     .container
       = render 'flash'
