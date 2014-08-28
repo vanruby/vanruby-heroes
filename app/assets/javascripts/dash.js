@@ -7,11 +7,11 @@ $( document ).ready(function() {
 
   (function() {
 
-    if($('.dash')){
+    if( $('.dash').length ){
 
-      var timeTilPageReloads      = 15000,
-          timeTilHighlightNominee = 800,
-          highlightDuration       = 20000;
+      var timeTilPageReloads      = 33000,
+          timeTilHighlightNominee = 4000,
+          highlightDuration       = 30000;
 
       var $nominee = $('td.nominee').random();
       $('.reason-bridge').html($nominee.find('.hidden').html());

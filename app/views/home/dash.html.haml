@@ -14,7 +14,7 @@
                 %h4.text-center
                   = nominee.name
                   %br
-                  = link_to "@#{nominee.login}", "https://github.com/#{nominee.login}", class: 'small', target: '_blank'
+                  = "@#{nominee.login}"
 
                 - nominee.votes.last.tap do |vote|
                   .reason.hidden
