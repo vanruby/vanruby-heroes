@@ -16,7 +16,7 @@
                   %br
                   = "@#{nominee.login}"
 
-                - nominee.votes.sample(1).tap do |vote|
+                - nominee.votes.sample(1).each do |vote|
                   .reason.hidden
                     = vote.voter.name
                     voted for
