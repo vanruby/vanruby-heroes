@@ -14,7 +14,7 @@ $( document ).ready(function() {
       });
 
       var timeTilHighlightNominee = 3000,
-          highlightDuration       = 9000;
+          highlightDuration       = 6000;
 
       var $nomineeGrid = $('.grid').random();
       $('.reason-bridge').html($nomineeGrid.find('.nominee').find('.hidden').html());
@@ -64,7 +64,7 @@ $( document ).ready(function() {
 
         // setTimeout(function(){ $('.dash .grid-container').removeClass('slide-down'); }, 2000);
 
-        setTimeout(reloadPage, 3000);
+        setTimeout(reloadPage, 2000);
       }
 
       setTimeout(startHighlight, timeTilHighlightNominee);
