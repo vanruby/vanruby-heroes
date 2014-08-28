@@ -37,4 +37,11 @@ class GithubUser
   attribute :following, Integer
   attribute :created_at, Time
   attribute :updated_at, Time
+
+  def name
+    da_name = @name
+    da_name = login if da_name.blank?
+
+    da_name
+  end
 end
