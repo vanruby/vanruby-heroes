@@ -9,9 +9,13 @@ $( document ).ready(function() {
 
     if( $('.dash').length ){
 
+      $('#container').BlocksIt({
+        numOfCol: 7
+      });
+
       var timeTilPageReloads      = 33000,
-          timeTilHighlightNominee = 4000,
-          highlightDuration       = 30000;
+          timeTilHighlightNominee = 1000,
+          highlightDuration       = 100000;
 
       var $nominee = $('td.nominee').random();
       $('.reason-bridge').html($nominee.find('.hidden').html());
@@ -21,15 +25,18 @@ $( document ).ready(function() {
       }
 
       function startHighlight(){
-        $('.overlay').addClass('visible');
-        $nominee.addClass('visible');
-
         $('.dash table').addClass('slide-down');
+        $nominee.addClass('slide-up');
 
-        $('.reason-bridge').addClass('visible');
+        setTimeout(function(){
+          $nominee.addClass('visible');
+          $('.overlay').addClass('visible');
+          $('.reason-bridge').addClass('visible');
+        }, 2000);
+
         setTimeout(function(){
           $('.reason-bridge').removeClass('hidden');
-        }, 2000);
+        }, 4000);
 
         setTimeout(stopHighlight, highlightDuration);
         setTimeout(reloadPage, timeTilPageReloads);

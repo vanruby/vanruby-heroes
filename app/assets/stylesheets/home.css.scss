@@ -63,11 +63,13 @@ div.nominations {
 .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
   background-color: #fcfcfc;
 }
-.table > tbody > tr > .nominee-thumb {
+#home-index .table > tbody > tr > .nominee-thumb {
   max-width: 10%;
 }
 .table > tbody > tr > .nominee-name {
   font-family: 'Lato', Arial, sans-serif;
+}
+#home-index .table > tbody > tr > .nominee-name {
   width: 22%;
 }
 .table > tbody > tr > .nominee-reason p {
@@ -896,19 +898,24 @@ div.nominations {
 
 /* Dash */
 
+body#home-dash {
+  overflow: hidden;
+}
 .dash .nominee-thumb {
-  position: relative;
+  max-width: 100%;
+  // position: relative;
+  position: absolute;
+  width: 160px;
 }
 .dash .nominee-thumb .img-circle {
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.13);
+  border: 2px solid rgba(150,150,150,0.1);
   position: relative;
 }
-.dash .nominee-thumb.visible {
+.dash .nominee-thumb.slide-up {
   left: 22px;
-  position: absolute;
   top: 0;
-  max-width: 100%;
-  width: 160px;
+}
+.dash .nominee-thumb.visible {
   z-index: 2000;
 }
 .dash .nominee-thumb.visible h4 {
@@ -918,7 +925,7 @@ div.nominations {
   color: #aaa;
 }
 .dash .nominee-thumb.visible .img-circle {
-  box-shadow: 1px 1px 3px rgba(255,255,255,0.2);
+  border-color: #fff;
 }
 
 .overlay {
@@ -953,7 +960,7 @@ div.nominations {
   position: relative;
   padding: 20px;
   top: -10px;
-  width: 100%;
+  width: 900px;
   z-index: 5000;
 }
 .dash .reason-bridge em {
@@ -962,6 +969,8 @@ div.nominations {
   font-size: 30px;
 }
 .reason-bridge.visible {
+  border-left: 4px solid #rgba(255,255,255,0.4);
+  height: 1px;
   opacity: 1;
 }
 .dash table {

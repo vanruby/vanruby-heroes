@@ -14,7 +14,8 @@
                 %h4.text-center
                   = nominee.name
                   %br
-                  = "@#{nominee.login}"
+                  %small
+                    = "@#{nominee.login}"
 
                 - nominee.votes.sample(1).each do |vote|
                   .reason.hidden

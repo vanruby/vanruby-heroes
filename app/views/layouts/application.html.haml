@@ -8,7 +8,7 @@
     %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
     = javascript_include_tag 'modernizr.custom'
 
-  %body
+  %body{ id: "#{controller_name}-#{action_name}" }
     %h1.title VanRuby Hero Awards
 
     .container

@@ -6,14 +6,14 @@
           - Nominee.all.shuffle.each do |nominee|
             %tr
               %td.nominee-thumb.visible-xs
-                %img{width: '100%', src: nominee.avatar_url}
+                %img.img-circle{width: '100%', src: nominee.avatar_url}
               %td.nominee-name.visible-xs
                 %h4.text-center
                   = nominee.name
                   %br
                   = link_to "@#{nominee.login}", "https://github.com/#{nominee.login}", class: 'small', target: '_blank'
               %td.nominee-thumb.nominee-name.hidden-xs
-                %img{width: '100%', src: nominee.avatar_url}
+                %img.img-circle{width: '100%', src: nominee.avatar_url}
                 %h4.text-center
                   = nominee.name
                   %br
