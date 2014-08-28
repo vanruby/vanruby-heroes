@@ -9,7 +9,7 @@
 .clearfix:after { clear: both; }
 
 body {
-  background: #FFFDFA;
+  background: #FDFBF8;
   padding-top: 90px;
   padding-bottom: 120px;
   position: relative;
@@ -33,9 +33,9 @@ a:hover, a:focus {
 
 
 h1.title {
-  background: #fff;
-  border-bottom: 1px solid #dadada;
-  color: #444;
+  background: #161214;
+  border-bottom: 1px solid #262224;
+  color: #f6f6f6;
   font-weight: 300;
   font-family: 'Lato', Arial, sans-serif;
   font-size: 24px;
@@ -870,3 +870,52 @@ div.nominations {
   border: 2px dotted #5ED15E;
   color: #3EC83E;
 }
+
+
+
+/* Dash */
+
+.dash .nominee-thumb {
+  position: relative;
+}
+.dash .nominee-thumb .img-circle {
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.13);
+  position: relative;
+}
+.dash .nominee-thumb.visible {
+  z-index: 2000;
+}
+.dash .nominee-thumb.visible h4 {
+  color: #fff;
+}
+.dash .nominee-thumb.visible a.small {
+  color: #aaa;
+}
+.dash .nominee-thumb.visible .img-circle {
+  box-shadow: 1px 1px 3px rgba(255,255,255,0.2);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  pointer-events: none;
+
+  z-index: 2;
+}
+.overlay.visible {
+  opacity: 1;
+}
+
+.animate {
+  opacity: 0;
+  transition: opacity 1s, transform 1s, color 1s, box-shadow 1s;
+}
+

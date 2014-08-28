@@ -16,5 +16,6 @@
 //= require classie
 //= require uiMorphingButton_fixed
 //= require button_handler
+//= require dash
 //= require_tree .
 

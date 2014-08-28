@@ -1,14 +1,21 @@
-.row
-  .col-xs-12
-    %table.table.text-center
-      - Nominee.all.shuffle.in_groups_of(7).each do |group|
-        %tr
-          - group.each do |nominee|
-            - next if nominee.nil?
+.dash
+  .row
+    .col-xs-12
+      %table.table.table-responsive.text-center
+        - Nominee.all.shuffle.in_groups_of(7).each do |group|
+          %tr
+            - group.each do |nominee|
+              - next if nominee.nil?
 
-            %td.nominee-thumb.nominee-name{ style: 'padding: 0 15px 5px' }
-              %img{width: '120', src: nominee.avatar_url}
-              %h4.text-center
-                = nominee.name
-                %br
-                = link_to "@#{nominee.login}", "https://github.com/#{nominee.login}", class: 'small', target: '_blank'
+              %td.nominee-thumb.nominee-name{ id: "github_id_#{nominee.github_id}", style: 'padding: 0 15px 5px' }
+                %img.img-circle{width: '120', src: nominee.avatar_url}
+                %h4.text-center
+                  = nominee.name
+                  %br
+                  = link_to "@#{nominee.login}", "https://github.com/#{nominee.login}", class: 'small', target: '_blank'
+
+                - nominee.votes.last.tap do |vote|
+                  .hidden
+                    = vote.reason
+
+.overlay.animate
