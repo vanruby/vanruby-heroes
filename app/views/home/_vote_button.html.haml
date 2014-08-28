@@ -20,8 +20,17 @@
                 Make it count, as
                 %strong you can only vote once.
 
-              = f.input :nominee_id, label: "Nominee Github"
+              = f.input :nominee_id, label: "Nominee Github", :wrapper => :vertical_input_group do
+                %span.input-group-addon
+                  = "@"
+                = f.input_field :nominee_id
+
               = f.input :reason, label: "Reason", input_html: { maxlength: 160 }
-              = f.input :voter_id, label: "Your Github"
+
+              = f.input :voter_id, label: "Your Github", :wrapper => :vertical_input_group do
+                %span.input-group-addon
+                  = "@"
+                = f.input_field :nominee_id
+
               = f.button :submit, "Submit"
 

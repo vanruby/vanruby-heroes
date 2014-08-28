@@ -344,12 +344,20 @@ div.nominations {
 .content-style-form input.btn {
   padding: 0px 10px;
   width: 100%;
-  border: 2px solid #FCF7F2;
+  border: 2px solid #fff;
   border-radius: 2px;
   background: #fff;
   color: #CC2424;
   font-weight: 300;
   font-size: 19px;
+}
+
+.content-style-form .input-group-addon {
+  background: #E93838;
+  color: #fff;
+  border: 2px solid #fff;
+  border-right: 0;
+  padding: 1px 8px;
 }
 
 .content-style-form input[type="text"]:focus,
@@ -361,13 +369,17 @@ div.nominations {
   outline: 0;
 }
 
+.content-style-form input[type="text"] {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .content-style-form input.btn {
   margin-top: 10px;
   padding: 5px;
 }
 .content-style-form input.btn:hover {
-  background: #F05858;
-  color: #fff;
+  background: rgba(255,255,255,0.9);
 }
 
 .content-style-form button {
@@ -854,12 +866,21 @@ div.nominations {
   color: #fff;
 }
 .help-block {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .has-error .form-control,
 .has-error .form-control:focus {
   border-color: #fff;
+}
+
+.has-error.form-group {
+  border: 2px solid #fff;
+  padding: 0 10px;
+}
+.has-error input[type="text"],
+.has-error textarea {
+  background: rgba(255,255,255,0.8);
 }
 
 .alert {
