@@ -16,6 +16,14 @@ class Vote < ActiveRecord::Base
     GithubUser.find(nominee_id)
   end
 
+  def voter_id=(github)
+    self['voter_id'] = github.downcase
+  end
+
+  def nominee_id=(github)
+    self['nominee_id'] = github.downcase
+  end
+
   private
 
   def validate_githubs
