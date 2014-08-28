@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/users/INVALID_GITHUB_USER_1234
+    uri: https://api.github.com/users/invalid_github_user_1234
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 27 Aug 2014 01:07:56 GMT
+      - Thu, 28 Aug 2014 18:20:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,9 +31,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '31'
+      - '54'
       X-Ratelimit-Reset:
-      - '1409101905'
+      - '1409253549'
       X-Github-Media-Type:
       - github.v3
       X-Xss-Protection:
@@ -50,16 +50,16 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 18540219:1F01:1C5E4A:53FD2F6C
+      - 60316D09:0872:16AD32A3:53FF72D7
       Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
+      - max-age=31536000; includeSubdomains; preload
       X-Content-Type-Options:
       - nosniff
     body:
       encoding: UTF-8
       string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3"}'
     http_version: 
-  recorded_at: Wed, 27 Aug 2014 01:07:56 GMT
+  recorded_at: Thu, 28 Aug 2014 18:20:08 GMT
 - request:
     method: get
     uri: https://api.github.com/users/chancancode
@@ -81,7 +81,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 27 Aug 2014 01:07:56 GMT
+      - Thu, 28 Aug 2014 18:20:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -91,15 +91,15 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '30'
+      - '53'
       X-Ratelimit-Reset:
-      - '1409101905'
+      - '1409253549'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Last-Modified:
-      - Tue, 26 Aug 2014 18:17:41 GMT
+      - Thu, 28 Aug 2014 18:17:19 GMT
       Etag:
-      - '"40629039e98978bffb21c4090610af3b"'
+      - '"b8d713cec790cce9ca37b461c68b3c0c"'
       Vary:
       - Accept
       - Accept-Encoding
@@ -119,17 +119,17 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Github-Request-Id:
-      - 18540219:1F02:2258A9:53FD2F6C
+      - 60316D09:0871:DA26921:53FF72D8
       Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains
+      - max-age=31536000; includeSubdomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Served-By:
-      - c046d59f93ede9ab52d5ac29f1ed70f7
+      - 88d924ed861736d2749ce1a55766cb53
     body:
       encoding: UTF-8
       string: '{"login":"chancancode","id":55829,"avatar_url":"https://avatars.githubusercontent.com/u/55829?v=2","gravatar_id":"22bb3e56828870ee9a0dd93aeadbe04a","url":"https://api.github.com/users/chancancode","html_url":"https://github.com/chancancode","followers_url":"https://api.github.com/users/chancancode/followers","following_url":"https://api.github.com/users/chancancode/following{/other_user}","gists_url":"https://api.github.com/users/chancancode/gists{/gist_id}","starred_url":"https://api.github.com/users/chancancode/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/chancancode/subscriptions","organizations_url":"https://api.github.com/users/chancancode/orgs","repos_url":"https://api.github.com/users/chancancode/repos","events_url":"https://api.github.com/users/chancancode/events{/privacy}","received_events_url":"https://api.github.com/users/chancancode/received_events","type":"User","site_admin":false,"name":"Godfrey
-        Chan","company":null,"blog":"http://about.me/godfreychan","location":null,"email":"","hireable":false,"bio":null,"public_repos":62,"public_gists":27,"followers":70,"following":4,"created_at":"2009-02-19T09:01:38Z","updated_at":"2014-08-26T18:17:41Z"}'
+        Chan","company":null,"blog":"http://about.me/godfreychan","location":null,"email":"","hireable":false,"bio":null,"public_repos":62,"public_gists":27,"followers":72,"following":4,"created_at":"2009-02-19T09:01:38Z","updated_at":"2014-08-28T18:17:19Z"}'
     http_version: 
-  recorded_at: Wed, 27 Aug 2014 01:07:57 GMT
+  recorded_at: Thu, 28 Aug 2014 18:20:08 GMT
 recorded_with: VCR 2.9.0

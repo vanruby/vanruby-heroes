@@ -11,7 +11,7 @@ describe "nominate a heroe", :vcr do
     fill_in 'vote_reason', with: "He makes rails so much lovable!"
     fill_in 'vote_voter_id', with: 'pcreux'
     expect {
-      click_button 'Nominate'
+      click_button 'Submit'
     }.to change { Vote.count }.by 1
 
     expect(page.body).to include "Thanks"
@@ -30,7 +30,7 @@ describe "nominate a heroe", :vcr do
     fill_in 'vote_reason', with: "He makes rails so much lovable!"
     fill_in 'vote_voter_id', with: 'INVALID_GITHUB_USER_1234'
     expect {
-      click_button 'Nominate'
+      click_button 'Submit'
     }.to_not change { Vote.count }
 
     expect(page.body).to include "is invalid"
