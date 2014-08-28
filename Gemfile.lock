@@ -36,6 +36,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     arel (6.0.0.beta1)
+    autoprefixer-rails (1.1.20140222)
+      execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -216,6 +218,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   byebug
   capybara
   coffee-rails (~> 4.0.0)

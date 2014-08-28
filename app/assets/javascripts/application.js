@@ -12,10 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.easing.1.3
 //= require bootstrap.min
 //= require classie
 //= require uiMorphingButton_fixed
 //= require button_handler
+//= require blocksit
 //= require dash
 //= require_tree .
 
