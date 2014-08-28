@@ -1,0 +1,25 @@
+.row
+  .col-xs-12.col-sm-12.col-sm-offset-0.col-md-8.col-md-offset-2
+    .nominations
+      %table.table.table-striped.table-hover.table-responsive
+        %tbody
+          - Nominee.all.each_with_index do |nominee, index|
+            %tr
+              %td.nominee-name
+                %h4
+                  %strong= "#{index + 1}."
+              %td.nominee-name
+                %h4
+                  = nominee.name
+                  %br
+                  = link_to "@#{nominee.login}", "https://github.com/#{nominee.login}", class: 'small', target: '_blank'
+                  %br
+                  %br
+                  = t('votes', count: nominee.votes_count)
+
+              %td.nominee-reason
+                - nominee.votes.each do |vote|
+                  .clearfix
+                    = vote.reason
+
+                    = link_to vote.voter.name, "https://github.com/#{vote.voter.login}", class: 'pull-right voter-name', target: '_blank'
