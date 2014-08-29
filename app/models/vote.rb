@@ -17,11 +17,11 @@ class Vote < ActiveRecord::Base
   end
 
   def voter_id=(github)
-    self['voter_id'] = github.downcase
+    self['voter_id'] = github.downcase.gsub(' ', '')
   end
 
   def nominee_id=(github)
-    self['nominee_id'] = github.downcase
+    self['nominee_id'] = github.downcase.gsub(' ', '')
   end
 
   private
