@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title VanRuby Hero Awards
+    %title VanRuby Hero Awards 2015
     %meta{name: 'description', content: 'The VanRuby Hero Awards gives recognition to influential devs in the Vancouver Ruby community.'}
     = stylesheet_link_tag    'application', media: 'all'
     = csrf_meta_tags
@@ -12,7 +12,7 @@
 
     %h1.title
       = image_tag('vanruby-logo.png', width: 32, style: 'margin-right: 6px;vertical-align: -9px;')
-      = "VanRuby Hero Awards"
+      = "VanRuby Hero Awards 2015"
       = "... vote now at <strong>heroes.vanruby.org</strong> !".html_safe if action_name == 'dash'
 
     .container
